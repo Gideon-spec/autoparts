@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Autoparts</title>
+</head>
+<body>
+   <nav class="SingleProductnavbar">
+    <div class="container">
+        <div class="arrowCart">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        </div>
+        <div class="cartDelete">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+        </div>
+    </div>
+   </nav>
+    <main class="SingleProductmain">
+     
+        <section class="slideshow">
+            <div class="container">
+
+                <div class="slideshowBox">
+                        
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <img src="img/Rectangle 72.svg" >
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="img/Rectangle 73.svg" >
+                          </div>
+        
+                      
+                      
+                      <a class="prev" onclick="plusSlides(-1)">❮ </a>
+                      <a class="next" onclick="plusSlides(1)">❯ </a>
+                      
+                      </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="ProductAndPrice">
+            <div class="container">
+                <div><h1 class="productTitle">Product Name</h1></div>
+                <div><p class="productPrice">$125</p></div>
+            </div>
+        </section>
+        <hr>
+        <section class="ProductDescription">
+            <div class="container">
+                <p>Lorem ipsum dolor sit amet, consectetur cing elit. Sagittis sem diam vulputate ultrices morbi ac aliquam, at integer.</p>
+            </div>
+            
+        </section>
+        <hr>
+
+        <section class="raiting">
+            <div class="container">
+                <div class="star"><img src="img/Star 5.png" alt=""></div>
+                <div class="ratingNumber"><p>4.8/5</p></div>
+                <div class="hori">|</div>
+                <div class="totalRating">125 Rating</div>
+                <div> <i class="fa fa-chevron-right fa-2xs" aria-hidden="true"></i> </div>
+            </div>
+        </section>
+        <hr>
+
+        <section class="Term">
+            <div class="container">
+                <h1>Terms</h1>
+                <div class="termBox">
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Lorem ipsum dolor sit amet, Lorem ipsum.  </li>
+                        <li>Lorem ipsum dolor sit amet Lorem</li>
+                        <li>Lorem ipsum dolor sit amet</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit <span id="...">...</span><span id="more">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum sit possimus modi animi nulla quibusdam minus iste, eaque quae eligendi magni. Perspiciatis, accusamus illum? Harum sequi soluta quos perferendis fuga!</span> <span id="mybtn">See more</span> </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="kingPatsshop">
+            <div class="container">
+                <h1>King Part Shop</h1>
+                <div class="raitingStore">
+                    <div>
+                        <div class="starplusRaiting">
+                            <img src="img/Star 5.png" alt="">
+                            <p>4.8/5</p>
+                        </div>
+                       
+                    </div>
+                    <div>
+                        <p class="visitStore">Visit Store</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="container-grid">
+                    <div class="items">
+                        <img src="img/Rectangle 72.png" alt="">
+                        <p class="reco">Lorem</p>
+                        <p class="reco-type">1,250/</p>
+                    </div>
+                    <div class="items">
+                        <img src="img/Rectangle 73.png" alt="">
+                        <p class="reco">Lorem</p>
+                        <p class="reco-type">1,250/</p>
+                    </div>
+                    <div class="items">
+                        <img src="img/Rectangle 72.png" alt="">
+                        <p class="reco">Lorem</p>
+                        <p class="reco-type">1,250</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+    </main>
+    <section class="addToCartByNow">
+        <div class="container">
+            <div>
+               <button class="AddToCart">Add to cart</button>
+            </div>
+            <div>
+               <button class="BuyNow">Buy now</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="items"><img src="img/Vector2.png" alt=""></div>
+            <div class="items"><img src="img/Vector3.png" alt=""></div>
+            <div class="items"><img src="img/Vector7.png" alt=""></div>
+            <div class="items"><img src="img/Vector5.png" alt=""></div>
+            <div class="items"><img src="img/Vector6.png" alt=""></div>
+        </div>
+    </footer>
+
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  
+  slides[slideIndex-1].style.display = "block";  
+  
+}
+
+
+
+
+    </script>
+</body>
+</html>
